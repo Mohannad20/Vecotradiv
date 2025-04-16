@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+* {
+  font-family: Bebas Neue;
+}
+
+
+
 
 @layer base {
     :root {

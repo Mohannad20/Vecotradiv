@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Hero = () => {
     return (
-      <div className="h-screen flex flex-col items-center justify-center text-center bg-black text-white">
+      <div className="h-screen flex flex-col items-center justify-center text-center primary bg-gray-400">
         <h1 className="text-4xl md:text-6xl font-bold">Votre agence de confiance</h1>
         <p className="mt-4 text-lg md:text-xl">Immobilier & travaux divers — tout en un</p>
         <div className="mt-6 space-x-4">
