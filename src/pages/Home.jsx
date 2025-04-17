@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Hero, Services, Gallery, Contact } from '../sections';
 import CurtainProlog from '../components/CurtainProlog';
+import PrologCursorCurtain from '../components/PrologCursorCurtain';
 
 
 const Home = () => {
@@ -8,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-    {showCurtain && <CurtainProlog onFinish={() => setShowCurtain(false)} /> }
+    {showCurtain && <PrologCursorCurtain onFinish={() => setShowCurtain(false)} /> }
     {
     <main>
       <section id="hero"><Hero /></section>

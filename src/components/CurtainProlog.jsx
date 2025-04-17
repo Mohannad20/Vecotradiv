@@ -1,26 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
-const CurtainProlog = ({ onFinish }) => {
-  const [pull, setPull] = useState(false);
+const CurtainProlog = ({ startLift, onFinish }) => {
+  useEffect(() => {
+    if (startLift) {
+      const timeout = setTimeout(() => {
+        onFinish?.();
+      }, 1200); // Match the transition duration
+      return () => clearTimeout(timeout);
+    }
+  }, [startLift]);
 
-  const handleClick = () => {
-    setPull(true);
-    setTimeout(() => {
-      onFinish();
-    }, 1200);
-  };
-
-  // The word you want to repeat
   const word = "VECOTRADIV";
-  const repeatCount = 15;
-  const fontSize = 85;
-  const lineHeight = fontSize * 0.67; // Small line spacing for tight vertical stack
+  const repeatCount = 51;
+  const fontSize = 19;
+  const lineHeight = fontSize * 0.76;
 
   return (
     <div
-      onClick={handleClick}
-      className={`fixed top-0 left-0 w-full h-screen z-50 transition-transform duration-[1200ms]  ${
-        pull ? "-translate-y-full" : ""
+      className={`fixed top-0 left-0 w-full h-screen z-50 transition-transform duration-[1200ms] ${
+        startLift ? "-translate-y-full" : ""
       }`}
     >
       <svg
@@ -31,19 +29,16 @@ const CurtainProlog = ({ onFinish }) => {
         <defs>
           <mask id="text-mask" x="0" y="0" width="100%" height="100%">
             <rect x="0" y="0" width="100%" height="100%" fill="white" />
-
-            {/* Repeat same word vertically with same width */}
             {Array.from({ length: repeatCount }).map((_, i) => (
               <text
                 key={i}
-                x="35%" 
+                x="25%"
                 y={100 + i * lineHeight}
                 fontSize={fontSize}
-                fontWeight="800"
+                fontWeight="650"
                 textAnchor="middle"
-                fill=""
-                // fontFamily="'Space Grotesk', 'Futura', 'Arial Black', sans-serif"
-                letterSpacing="0"
+                fontFamily="'Monument'"
+                letterSpacing="2.5"
               >
                 {word}
               </text>
@@ -51,13 +46,12 @@ const CurtainProlog = ({ onFinish }) => {
           </mask>
         </defs>
 
-        {/* Apply the mask to a curtain */}
         <rect
           x="0"
           y="0"
           width="100%"
           height="100%"
-          fill="#ffffff"
+          fill="#25497b"
           mask="url(#text-mask)"
         />
       </svg>
