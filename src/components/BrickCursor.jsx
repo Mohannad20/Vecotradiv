@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import brick from '../../public/images/brick.png';
+import brick1 from '../../public/images/brick1.png';
 
 const BrickCursor = ({ onCompleteShrink }) => {
   const brickRef = useRef(null);
@@ -20,24 +20,35 @@ const BrickCursor = ({ onCompleteShrink }) => {
   }, []);
 
   useEffect(() => {
-    let shrinkInterval;
-
+    let interval;
+  
     if (isClicking && !shrinkDone) {
       let currentScale = 1;
-      shrinkInterval = setInterval(() => {
+      interval = setInterval(() => {
         currentScale -= 0.01;
         if (currentScale <= 0.6) {
           currentScale = 0.6;
-          clearInterval(shrinkInterval);
+          clearInterval(interval);
           setShrinkDone(true);
           onCompleteShrink?.();
         }
         setScale(currentScale);
-      }, 60);
+      }, 45);
+    } else if (!isClicking && !shrinkDone) {
+      // Grow back smoothly
+      let currentScale = scale;
+      interval = setInterval(() => {
+        currentScale += 0.02;
+        if (currentScale >= 1) {
+          currentScale = 1;
+          clearInterval(interval);
+        }
+        setScale(currentScale);
+      }, 30);
     }
-
-    return () => clearInterval(shrinkInterval);
-  }, [isClicking, shrinkDone]);
+  
+    return () => clearInterval(interval);
+  }, [isClicking, shrinkDone]);  
 
   return (
     <>
@@ -45,14 +56,14 @@ const BrickCursor = ({ onCompleteShrink }) => {
         ref={brickRef}
         className="pointer-events-none fixed z-[9999]"
         style={{
-          width: "90px", // Adjusted size for visibility (can be smaller/larger)
+          width: "250px", // Adjusted size for visibility (can be smaller/larger)
           height: "auto",
           transform: `translate(-50%, -50%) scale(${scale})`,
           transition: "transform 0.05s ease-out",
         }}
       >
         <img
-          src= {brick} // Replace with your actual path
+          src= {brick1} // Replace with your actual path
           alt="brick"
           draggable={false}
           className="select-none"
@@ -62,6 +73,8 @@ const BrickCursor = ({ onCompleteShrink }) => {
             height: "auto",
           }}
         />
+
+        
       </div>
 
       {/* Hide native cursor */}
@@ -77,6 +90,8 @@ const BrickCursor = ({ onCompleteShrink }) => {
         onMouseDown={() => setIsClicking(true)}
         onMouseUp={() => setIsClicking(false)}
       />
+
+      
     </>
   );
 };

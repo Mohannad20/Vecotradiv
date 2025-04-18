@@ -1,23 +1,90 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  return (
-    <div>
-      <nav className="bg-gray-800 text-white py-4 px-6 fixed w-full top-0 z-10">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-lg font-bold"><Link to={'/'}>VECOTRADIV</Link></div>
-          <ul className="flex space-x-6">
-            <li><Link to={'/'} className="hover:text-gray-400">Home</Link></li>
-            <li><Link to={'/services'} className="hover:text-gray-400">Services</Link></li>
-            <li><Link to={'/gallery'} className="hover:text-gray-400">Galerie</Link></li>
-            <li><Link to={'/about'} className="hover:text-gray-400">About</Link></li>
-            <li><Link to={'/contact'} className="hover:text-gray-400">Contact</Link></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  )
-}
+  const [isHovered, setIsHovered] = useState(false);
 
-export default Navbar
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Galerie", path: "/gallery" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  return (
+    <div className="fixed top-0 left-0 w-full z-50 ">
+      <div
+        className="w-fit max-w-screen flex items-center justify-around  px-6 py-4"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {/* LOGO aligned with the 25% column */}
+        <div className="">
+          <Link to="/">
+            <svg
+              width="650"
+              height="50"
+              viewBox="-23 0.5 100 35"
+              style={{
+                mixBlendMode: "overlay", // or try 'multiply', 'overlay'
+              }}
+            >
+              <text
+                x="50%"
+                y="75%"
+                textAnchor="middle"
+                fontFamily="'Monument'"
+                fontSize="19"
+                fontWeight="650"
+                letterSpacing="2.6"
+                fill="none"
+                stroke="black"
+                strokeWidth="1"
+              >
+                VECOTRADIV
+              </text>
+            </svg>
+          </Link>
+        </div>
+
+        {/* NAV ITEMS */}
+        <div
+          className={`${
+            isHovered ? "opacity-100" : "opacity-0"
+          } flex items-center gap-8 transition-opacity duration-300`}
+        >
+          {navItems.map((item, index) => (
+            // <Link
+            //   key={index}
+            //   to={item.path}
+            //   className="text-black font-[Nippo]  text-[19px] tracking-[2.5px] font-[280] hover:opacity-80 "
+            // >
+            //   {item.name}
+            // </Link>
+            <Link
+              key={index}
+              to={item.path}
+              className={`relative px-2 group text-black font-[Nippo] text-[19px] tracking-[2.5px] font-[280] hover:opacity-80 transition-all duration-500
+    ${
+      isHovered
+        ? `translate-x-0 delay-${index * 100}`
+        : "-translate-x-4 opacity-0"
+    }`}
+            >
+              {/* Dots in corners */}
+              <span className="absolute top-0 left-0 w-[5px] h-[5px]  bg-black opacity-0 group-hover:opacity-100 transition duration-300 animate-spin"></span>
+              <span className="absolute top-0 right-0 w-[5px] h-[5px]  bg-black opacity-0 group-hover:opacity-100 transition duration-300 animate-spin"></span>
+              <span className="absolute bottom-0 left-0 w-[5px] h-[5px]  bg-black opacity-0 group-hover:opacity-100 transition duration-300 animate-spin"></span>
+              <span className="absolute bottom-0 right-0 w-[5px] h-[5px]  bg-black opacity-0 group-hover:opacity-100 transition duration-300 animate-spin"></span>
+
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

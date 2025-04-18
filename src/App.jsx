@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { Home, About, Gallery, Contact, NotFound, Services } from './pages';
+import CustomCursor from './components/CustomCursor';
 
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
     <div>
       <BrowserRouter>
       <Navbar/>
+      <CustomCursor/>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About/>} />

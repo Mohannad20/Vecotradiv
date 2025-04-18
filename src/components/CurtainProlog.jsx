@@ -17,8 +17,8 @@ const CurtainProlog = ({ startLift, onFinish }) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-screen z-50 transition-transform duration-[1200ms] ${
-        startLift ? "-translate-y-full" : ""
+      className={`fixed top-0 left-0 w-full h-screen z-50 transition-transform duration-[1200ms] ease-[cubic-bezier(0.77,0,0.175,1)] ${
+        startLift ? "-translate-y-full scale-y-105 skew-y-1" : ""
       }`}
     >
       <svg
