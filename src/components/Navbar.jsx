@@ -55,12 +55,6 @@ const Navbar = () => {
           } flex items-center gap-8 transition-opacity duration-300`}
         >
           {navItems.map((item, index) => (
-            // <Link
-            //   key={index}
-            //   to={item.path}
-            //   className="text-black font-[Nippo]  text-[19px] tracking-[2.5px] font-[280] hover:opacity-80 "
-            // >
-            //   {item.name}
             // </Link>
             <Link
               key={index}
@@ -73,10 +67,11 @@ const Navbar = () => {
     }`}
             >
               {/* Dots in corners */}
-              <span className="absolute top-0 left-0 w-[5px] h-[5px]  bg-black opacity-0 group-hover:opacity-100 transition duration-300 animate-spin"></span>
-              <span className="absolute top-0 right-0 w-[5px] h-[5px]  bg-black opacity-0 group-hover:opacity-100 transition duration-300 animate-spin"></span>
-              <span className="absolute bottom-0 left-0 w-[5px] h-[5px]  bg-black opacity-0 group-hover:opacity-100 transition duration-300 animate-spin"></span>
-              <span className="absolute bottom-0 right-0 w-[5px] h-[5px]  bg-black opacity-0 group-hover:opacity-100 transition duration-300 animate-spin"></span>
+              <span className="absolute top-0 left-0 w-[5px] h-[5px] bg-black opacity-0 group-hover:opacity-100 transform -translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out animate-spin"></span>
+              <span className="absolute top-0 right-0 w-[5px] h-[5px] bg-black opacity-0 group-hover:opacity-100 transform -translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out animate-spin"></span>
+              <span className="absolute bottom-0 left-0 w-[5px] h-[5px] bg-black opacity-0 group-hover:opacity-100 transform -translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out animate-spin"></span>
+              <span className="absolute bottom-0 right-0 w-[5px] h-[5px] bg-black opacity-0 group-hover:opacity-100 transform -translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out animate-spin"></span>
+
 
               {item.name}
             </Link>
