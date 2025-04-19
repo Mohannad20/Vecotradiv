@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useRef } from "react";
+import { Card } from "../components/Card";
+import { BrickScroller } from "../components/BrickScroller";
 
 export const Services = () => {
+  const cardRef = useRef();
+
   return (
-    <div className="p-8">Services Overview</div>
-  )
-}
+    <section className="relative w-full min-h-1/2 bg-neutral-400 text-white px-6 py-12 flex flex-col items-center justify-between">
+      <Card ref={cardRef} />
+      <BrickScroller targetRef={cardRef} />
+    </section>
+  );
+};
+
+export default Services;

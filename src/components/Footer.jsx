@@ -25,7 +25,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-black text-white font-[Nippo] font-light py-2 pb-6 overflow-hidden">
+    <footer className="relative bg-neutral-900 text-white font-[Nippo] font-light py-2 pb-6 overflow-hidden">
       {/* Top Orbiting Links */}
       <div className="flex justify-between items-center  px-6 text-xs md:text-sm">
         <div className="flex gap-6">
@@ -37,7 +37,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="group relative p-1.5 text-sm hover:text-amber-300 transition-colors duration-300"
             >
-              <CornerDots />
+              <CornerDots  />
               {link.icon}
             </a>
           ))}

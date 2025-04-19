@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import CornerDots from "./CornerDots";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const navItems = [
-    { name: "Home", path: "/" },
+    // { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
     { name: "Galerie", path: "/gallery" },
     { name: "About", path: "/about" },
@@ -27,7 +28,7 @@ const Navbar = () => {
               height="50"
               viewBox="-23 0.5 100 35"
               style={{
-                mixBlendMode: "overlay", // or try 'multiply', 'overlay'
+                mixBlendMode: "overlay",
               }}
             >
               <text
@@ -59,20 +60,15 @@ const Navbar = () => {
             <Link
               key={index}
               to={item.path}
-              className={`relative px-2 group text-black font-[Nippo] text-[19px] tracking-[2.5px] font-[280] hover:opacity-80 transition-all duration-500
+              className={`relative px-2 group text-black font-[Nippo] hover:text-yellow-400 text-[19px] tracking-[2.5px] font-[280] hover:opacity-80 transition-all duration-500
     ${
       isHovered
-        ? `translate-x-0 delay-${index * 100}`
+        ? `translate-x-0 delay-${index * 100} `
         : "-translate-x-4 opacity-0"
     }`}
             >
               {/* Dots in corners */}
-              <span className="absolute top-0 left-0 w-[5px] h-[5px] bg-black opacity-0 group-hover:opacity-100 transform -translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out animate-spin"></span>
-              <span className="absolute top-0 right-0 w-[5px] h-[5px] bg-black opacity-0 group-hover:opacity-100 transform -translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out animate-spin"></span>
-              <span className="absolute bottom-0 left-0 w-[5px] h-[5px] bg-black opacity-0 group-hover:opacity-100 transform -translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out animate-spin"></span>
-              <span className="absolute bottom-0 right-0 w-[5px] h-[5px] bg-black opacity-0 group-hover:opacity-100 transform -translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out animate-spin"></span>
-
-
+              <CornerDots bg="bg-black" />
               {item.name}
             </Link>
           ))}
