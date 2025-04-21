@@ -58,7 +58,7 @@ export const BrickScroller = ({ targetRef }) => {
   const handleMouseUp = () => {
     isDragging.current = false;
     controls.start({
-      scaleX: 5,
+      scaleX: 1,
       scaleY: 1,
       y: [0, -2.5, 0],
       transition: {
@@ -102,16 +102,16 @@ export const BrickScroller = ({ targetRef }) => {
       {/* Track Line */}
       <div
         ref={lineRef}
-        className="absolute w-[80%] max-w-4xl h-2 bg-neutral-700 rounded-none"
+        className="absolute w-[80%] max-w-4xl h-2 bg-neutral-700 rounded-full"
         style={{ top: "65%", transform: "translateY(-50%)" }}
       />
 
       {/* Brick */}
       <motion.div
         ref={brickRef}
-        className="absolute z-10 w-16 h-10 bg-yellow-400 border-4 border-black rounded-md flex items-center justify-center shadow-md cursor-pointer"
+        className="absolute z-10 w-18 h-9 bg-neutral-700 border-2 border-neutral-200 border-dashed rounded-md flex items-center justify-center shadow-md cursor-pointer"
         style={{
-          left: `${brickX+280}px`,
+          left: `calc(19% + ${brickX}px)`, // 10% = (100% - 80%) / 2
           top: "50%",
           transform: "translateY(-50%)",
         }}
@@ -119,7 +119,7 @@ export const BrickScroller = ({ targetRef }) => {
         whileHover={{ scale: 1.05 }}
         onMouseDown={handleMouseDown}
       >
-        🧱
+        
       </motion.div>
     </div>
   );

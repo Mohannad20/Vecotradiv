@@ -51,7 +51,7 @@ const CurtainProlog = ({ startLift, onFinish }) => {
           y="0"
           width="100%"
           height="100%"
-          fill="#25497b"
+          fill="black"
           mask="url(#text-mask)"
         />
       </svg>

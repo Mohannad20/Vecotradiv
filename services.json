@@ -1,0 +1,121 @@
+{
+  "services": [  
+      {
+        "title": "Vente et achat de biens",
+        "description": "Nous facilitons l'achat et la vente de biens immobiliers avec transparence.",
+        "tool": "CRM, géolocalisation, estimation immobilière",
+        "useCase": "Accompagnement complet des clients dans leurs transactions immobilières.",
+        "animation": "House"
+      },
+      {
+        "title": "Location",
+        "description": "Trouvez ou mettez en location un bien en toute simplicité.",
+        "tool": "Gestion de calendriers, alertes de disponibilité",
+        "useCase": "Services de location pour particuliers et professionnels.",
+        "animation": "Keys"
+      },
+      {
+        "title": "Gestion locative",
+        "description": "Gestion complète de vos biens loués : loyers, contrats, maintenance.",
+        "tool": "Portail propriétaires, tableaux de suivi",
+        "useCase": "Optimisation de la gestion quotidienne des biens loués.",
+        "animation": "Dashboard"
+      },
+      {
+        "title": "Évaluation et expertise",
+        "description": "Évaluation fiable de la valeur de vos biens immobiliers.",
+        "tool": "Outils d'analyse du marché, expertise légale",
+        "useCase": "Déterminer la valeur exacte pour achat ou vente.",
+        "animation": "Analysis"
+      },
+      {
+        "title": "Accompagnement personnalisé",
+        "description": "Un agent dédié vous suit à chaque étape du processus.",
+        "tool": "Support client 1:1, outils de suivi",
+        "useCase": "Conseil sur mesure et humain pour chaque projet immobilier.",
+        "animation": "Handshake"
+      }
+    ,
+    
+      {
+        "title": "Travaux divers",
+        "description": "Tous types de travaux de rénovation ou d’amélioration.",
+        "tool": "Main d’œuvre spécialisée, gestion de chantier",
+        "useCase": "Rénover ou améliorer vos espaces rapidement et efficacement.",
+        "animation": "Tools"
+      },
+      {
+        "title": "Construction gros œuvre",
+        "description": "Fondations, murs, toitures : le squelette de votre bâtiment.",
+        "tool": "Bétonnières, coffrages, plans architecturaux",
+        "useCase": "Construction solide et conforme aux normes en vigueur.",
+        "animation": "Construction"
+      },
+      {
+        "title": "Aménagement extérieur",
+        "description": "Jardinage, assainissement, réseaux électriques/phones.",
+        "tool": "Pelleteuses, engins réseaux, outils de jardinage",
+        "useCase": "Créez un extérieur beau, fonctionnel et durable.",
+        "animation": "Garden"
+      },
+      {
+        "title": "Plomberie & sanitaire",
+        "description": "Installation et réparation de systèmes d’eau et sanitaires.",
+        "tool": "Clés à molette, tuyauterie, équipements sanitaires",
+        "useCase": "Assurer un confort et une hygiène optimaux.",
+        "animation": "Plumber"
+      },
+      {
+        "title": "Revêtement carrelage / sol / granite / marbre",
+        "description": "Des sols durables et esthétiques adaptés à tous les goûts.",
+        "tool": "Niveleurs, colles, carreaux, pierres naturelles",
+        "useCase": "Finitions de qualité pour intérieur et extérieur.",
+        "animation": "Floor"
+      },
+      {
+        "title": "Électricité & réseaux",
+        "description": "Installation réseau électrique, télécom, internet, caméras.",
+        "tool": "Câblage, routeurs, équipements de sécurité",
+        "useCase": "Sécurité, connectivité et confort optimal.",
+        "animation": "Electric"
+      },
+      {
+        "title": "Climatisation & ventilation",
+        "description": "Solutions de climatisation neuves et entretien.",
+        "tool": "Pompes à chaleur, systèmes split, gaines",
+        "useCase": "Régulation thermique efficace toute l'année.",
+        "animation": "AC"
+      },
+      {
+        "title": "Menuiserie",
+        "description": "Conception bois, aluminium, PVC, inox pour tout usage.",
+        "tool": "Scies, machines à bois, équipements sur mesure",
+        "useCase": "Aménagement intérieur et extérieur sur mesure.",
+        "animation": "Wood"
+      },
+      {
+        "title": "Peinture",
+        "description": "Peinture intérieure, extérieure, décorative ou industrielle.",
+        "tool": "Pistolets, rouleaux, teintes pro",
+        "useCase": "Valoriser l’esthétique et la protection des surfaces.",
+        "animation": "Brush"
+      }
+    ,
+    
+      {
+        "title": "Fournitures de bureau",
+        "description": "Tout le nécessaire pour équiper votre espace de travail.",
+        "tool": "Papeterie, mobilier, informatique",
+        "useCase": "Approvisionnement complet pour professionnels.",
+        "animation": "Office"
+      },
+      {
+        "title": "Articles ménagers",
+        "description": "Produits et équipements pour la maison.",
+        "tool": "Appareils électroménagers, ustensiles, accessoires",
+        "useCase": "Faciliter la vie quotidienne avec des produits fiables.",
+        "animation": "Home"
+      }
+  ]
+  }
+  

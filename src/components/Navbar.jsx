@@ -60,7 +60,7 @@ const Navbar = () => {
             <Link
               key={index}
               to={item.path}
-              className={`relative px-2 group text-black font-[Nippo] hover:text-yellow-400 text-[19px] tracking-[2.5px] font-[280] hover:opacity-80 transition-all duration-500
+              className={`relative px-2 group text-black font-[Nippo] hover:font-[310] text-[19px] tracking-[2.5px] font-[280] hover:opacity-80 transition-all duration-500
     ${
       isHovered
         ? `translate-x-0 delay-${index * 100} `
