@@ -44,7 +44,7 @@ const BrutalistCard = ({ title, description, index , tool , useCase  }) => {
         </span>
         <span
           onClick={() => setShowMore((prev) => !prev)}
-          className="text-xs font-light uppercase tracking-wide underline underline-offset-4 decoration-dotted hover:text-yellow-400 transition cursor-pointer"
+          className="text-xs font-light uppercase p-0.5 tracking-wide underline underline-offset-4 decoration-dotted hover:text-yellow-400 transition cursor-pointer"
         >
           plus d'infos
         </span>
