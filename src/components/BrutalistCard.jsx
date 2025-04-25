@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
-import Brush from "../assets/animations/brush.json";
+import Wrench from "../assets/animations/Wrench.json";
 
-const BrutalistCard = ({ title, description, index , tool , useCase  }) => {
+const BrutalistCard = ({ title, description, index , tool , useCase, animation  }) => {
   const [showMore, setShowMore] = useState(false);
+  const [animationData, setAnimationData] = useState(null);
+
+  useEffect(() => {
+    const loadAnimation = async () => {
+      const animationModule = await import(`../assets/animations/${animation}.json`);
+      setAnimationData(animationModule.default);
+  
+    }
+    loadAnimation();
+  }, [animation]);
 
   return (
     <div className="relative flex flex-col justify-between min-w-[280px] bg-white font-[nippo] text-black border border-black p-4 hover:bg-neutral-100 transition group overflow-hidden">
@@ -29,7 +39,7 @@ const BrutalistCard = ({ title, description, index , tool , useCase  }) => {
         {/* Lottie animation */}
         <div className="my-3 flex justify-center items-center">
           <Lottie
-            animationData={Brush}
+            animationData={animationData }
             loop
             autoplay
             style={{ height: "100px", width: "100px" }}
