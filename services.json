@@ -56,14 +56,14 @@
         "description": "Jardinage, assainissement, réseaux électriques/phones.",
         "tool": "Pelleteuses, engins réseaux, outils de jardinage",
         "useCase": "Créez un extérieur beau, fonctionnel et durable.",
-        "animation": "Garden"
+        "animation": "Gardening"
       },
       {
         "title": "Plomberie & sanitaire",
         "description": "Installation et réparation de systèmes d’eau et sanitaires.",
         "tool": "Clés à molette, tuyauterie, équipements sanitaires",
         "useCase": "Assurer un confort et une hygiène optimaux.",
-        "animation": "Plumber"
+        "animation": "Wrench"
       },
       {
         "title": "Revêtement carrelage / sol / granite / marbre",
@@ -77,7 +77,7 @@
         "description": "Installation réseau électrique, télécom, internet, caméras.",
         "tool": "Câblage, routeurs, équipements de sécurité",
         "useCase": "Sécurité, connectivité et confort optimal.",
-        "animation": "Electric"
+        "animation": "Pole"
       },
       {
         "title": "Climatisation & ventilation",
@@ -91,7 +91,7 @@
         "description": "Conception bois, aluminium, PVC, inox pour tout usage.",
         "tool": "Scies, machines à bois, équipements sur mesure",
         "useCase": "Aménagement intérieur et extérieur sur mesure.",
-        "animation": "Wood"
+        "animation": "Hammer"
       },
       {
         "title": "Peinture",
