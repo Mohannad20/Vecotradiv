@@ -4,6 +4,12 @@
   cursor: none;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  /* Prevent horizontal scroll */
+}
+
 /* #text {
   font-family: Monument;
   font-size: 19px;
@@ -20,6 +26,19 @@
   scrollbar-width: none; 
 }
 
+.horizontal-gallery-container {
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+
+.horizontal-scroll {
+  display: inline-block;
+  height: 100%;
+  padding: 20px;
+}
 
 
 @layer base {
