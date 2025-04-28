@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: "Galerie", path: "/gallery" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
+    { name: "Carrières", path: "/careers" },
   ];
 
   return (
@@ -20,7 +21,6 @@ const Navbar = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* LOGO aligned with the 25% column */}
         <div className="">
           <Link to="/">
             <svg

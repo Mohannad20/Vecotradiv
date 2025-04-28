@@ -16,7 +16,7 @@ const Footer = () => {
     { name: "Galerie", path: "/gallery" },
     { name: "À propos", path: "/about" },
     { name: "Contact", path: "/contact" },
-    { name: "Carrières", path: "/#" },
+    { name: "Carrières", path: "/careers" },
   ];
 
   const terms = [
