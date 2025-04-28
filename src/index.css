@@ -7,15 +7,22 @@
 body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;  /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
-/* #text {
-  font-family: Monument;
-  font-size: 19px;
-  color : none;
-  -webkit-text-stroke: 1px black;
-} */
+.glitch:hover {
+  animation: glitch 0.4s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(-1px, -1px); }
+  60% { transform: translate(1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
 
 /* Hide scrollbar */
 .no-scrollbar::-webkit-scrollbar {
@@ -40,75 +47,57 @@ body, html {
   padding: 20px;
 }
 
+.link-underline {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
 
-@layer base {
-    :root {
-      /* Light Theme */
-      --background: 210 10% 98%; /* Light gray */
-      --foreground: 220 15% 20%; /* Darker gray for text */
-      --card: 0 0% 100%; /* White for cards */
-      --card-foreground: 220 15% 20%; /* Dark gray text on cards */
-      --popover: 0 0% 100%; /* White for popovers */
-      --popover-foreground: 220 15% 20%; /* Dark gray text on popovers */
-      
-      /* Primary Colors */
-      --primary: 210 90% 55%; /* Main color for large areas */
-      --primary-foreground: 0 0% 100%; /* White text on primary background */
-      
-      /* Secondary Colors */
-      --secondary: 42 70% 65%; /* Golden tan for highlights */
-      --secondary-foreground: 220 15% 20%; /* Dark gray text on secondary */
-      
-      /* Accent Colors */
-      --accent: 220 14.3% 95.9%; /* Accent orange for buttons and links */
-      --accent-foreground: 0 0% 100%; /* White text on accent */
-      
-      /* Utility Colors */
-      --muted: 210 10% 92%; /* Light gray for muted backgrounds */
-      --muted-foreground: 220 10% 30%; /* Muted dark text */
-      --destructive: 0 84.2% 60.2%; /* Destructive actions */
-      --destructive-foreground: 60 9.1% 97.8%; /* Light color for text on destructive */
-      --border: 210 15% 85%; /* Light gray borders */
-      --input: 210 15% 85%; /* Input fields */
-      --ring: 210 90% 55%; /* Ring for focus */
-      --radius: 0.5rem;
-      
-      /* Chart Colors */
-      --chart-1: 180 60% 50%;
-      --chart-2: 140 45% 45%;
-      --chart-3: 30 80% 55%;
-      --chart-4: 270 50% 60%;
-      --chart-5: 310 70% 55%;
-    }
-  
-    .dark {
-      /* Dark Theme */
-      --background: 220 15% 10%; /* Dark gray */
-      --foreground: 210 10% 98%; /* Near-white for text */
-      --card: 220 15% 10%; /* Dark card background */
-      --card-foreground: 210 10% 98%; /* Light text on dark cards */
-      --popover: 220 15% 10%; /* Dark background for popovers */
-      --popover-foreground: 210 10% 98%; /* Light text on popovers */
-      
-      /* Primary Colors */
-      --primary: 210 90% 60%; /* Bright primary for dark mode */
-      --primary-foreground: 0 0% 100%; /* White on primary */
-      
-      /* Secondary Colors */
-      --secondary: 42 60% 50%; /* Softer tan in dark mode */
-      --secondary-foreground: 210 10% 98%; /* Light text on secondary */
-      
-      /* Accent Colors */
-      --accent: 12 76% 61%; /* Accent color for dark mode */
-      --accent-foreground: 0 0% 100%; /* White on accent */
-      
-      /* Utility Colors */
-      --muted: 220 10% 25%; /* Muted background for dark mode */
-      --muted-foreground: 210 10% 98%; /* Light text on muted background */
-      --destructive: 0 72.2% 50.6%; /* Destructive action */
-      --destructive-foreground: 210 10% 98%; /* Light text */
-      --border: 220 15% 25%; /* Border for dark mode */
-      --input: 220 15% 25%; /* Input for dark mode */
-      --ring: 210 90% 60%; /* Ring color */
-    }
+.link-underline::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition: width 0.4s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+.marquee-container {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: scrollLeft 800s linear infinite;
+  padding-left: 100%; /* Start off-screen */
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
