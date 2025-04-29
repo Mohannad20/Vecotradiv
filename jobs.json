@@ -1,0 +1,146 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Ingénieur en Mécanique",
+      "department": "Ingénierie",
+      "location": "Inezgane, Maroc",
+      "type": "Plein temps",
+      "description": "Nous recherchons un ingénieur en mécanique passionné pour rejoindre notre équipe dynamique. Vous serez responsable de la conception et de l'analyse des systèmes mécaniques.",
+      "responsibilities": [
+        "Concevoir des systèmes mécaniques.",
+        "Effectuer des analyses de performance.",
+        "Collaborer avec d'autres départements."
+      ],
+      "requirements": [
+        "Diplôme en ingénierie mécanique.",
+        "Expérience dans la conception assistée par ordinateur (CAO).",
+        "Compétences en résolution de problèmes."
+      ],
+      "animation": "Wrench"
+    },
+    {
+      "id": 2,
+      "title": "Stagiaire en Développement Logiciel",
+      "department": "Développement",
+      "location": "Agadir, Maroc (Hybride possible)",
+      "type": "Stage",
+      "description": "Opportunité de stage pour étudiants en informatique souhaitant développer leurs compétences pratiques en développement logiciel. Le stagiaire participera à des projets réels sous la supervision de nos développeurs seniors.",
+      "responsibilities": [
+        "Contribuer au développement de fonctionnalités sous guidance",
+        "Participer aux revues de code",
+        "Assister dans la résolution de bugs",
+        "Documenter le code et les processus",
+        "Apprendre les bonnes pratiques de développement"
+      ],
+      "requirements": [
+        "Étudiant en informatique, génie logiciel ou domaine connexe",
+        "Bases en programmation (JavaScript, Python, Java ou similaire)",
+        "Intérêt pour le développement web/mobile/logiciel",
+        "Capacité d'apprentissage et esprit d'équipe",
+        "Connaissances de base en algorithmique"
+      ],
+      "bonus": [
+        "Familiarité avec Git",
+        "Expérience avec un framework (React, Angular, Django, etc.)",
+        "Compréhension des bases de données"
+      ],
+      "animation": "Code"
+    },
+    {
+      "id": 3,
+      "title": "Architecte",
+      "department": "Architecture",
+      "location": "Dchiera, Maroc",
+      "type": "Plein temps",
+      "description": "Nous recherchons un architecte créatif pour concevoir des espaces innovants et fonctionnels. Vous travaillerez sur des projets variés allant de la conception résidentielle à commerciale.",
+      "responsibilities": [
+        "Créer des conceptions architecturales.",
+        "Collaborer avec les clients et les entrepreneurs.",
+        "Assurer la conformité aux réglementations locales."
+      ],
+      "requirements": [
+        "Diplôme en architecture.",
+        "Expérience dans la conception de bâtiments.",
+        "Compétences en logiciels de modélisation 3D."
+      ],
+      "animation": "Hammer"
+    },
+    {
+      "id": 4,
+      "title": "Gestionnaire de Projet",
+      "department": "Gestion de Projet",
+      "location": "Agadir, Maroc",
+      "type": "Plein temps",
+      "description": "Nous recherchons un gestionnaire de projet expérimenté pour superviser nos projets de construction. Vous serez responsable de la planification, de l'exécution et du suivi des projets.",
+      "responsibilities": [
+        "Gérer le budget et le calendrier du projet.",
+        "Coordonner les équipes de travail.",
+        "Assurer la qualité et la sécurité sur le site."
+      ],
+      "requirements": [
+        "Diplôme en gestion de projet ou domaine connexe.",
+        "Expérience dans la gestion de projets de construction.",
+        "Excellentes compétences en communication."
+      ],
+      "animation": "Office"
+    },
+    {
+      "id": 5,
+      "title": "Technicien en Électricité",
+      "department": "Électricité",
+      "location": "Tanger, Maroc",
+      "type": "Plein temps",
+      "description": "Nous recherchons un technicien en électricité qualifié pour installer et entretenir nos systèmes électriques. Vous travaillerez sur des projets résidentiels et commerciaux.",
+      "responsibilities": [
+        "Installer des systèmes électriques.",
+        "Effectuer des réparations et de la maintenance.",
+        "Lire et interpréter des plans électriques."
+      ],
+      "requirements": [
+        "Diplôme en électricité ou domaine connexe.",
+        "Expérience dans l'installation électrique.",
+        "Certifications pertinentes."
+      ],
+      "animation": "Wrench"
+    },
+    {
+      "id": 6,
+      "title": "Designer d'Intérieur",
+      "department": "Design",
+      "location": "Fès, Maroc",
+      "type": "Plein temps",
+      "description": "Nous recherchons un designer d'intérieur créatif pour concevoir des espaces intérieurs fonctionnels et esthétiques. Vous travaillerez sur des projets résidentiels et commerciaux.",
+      "responsibilities": [
+        "Créer des conceptions d'intérieur.",
+        "Sélectionner des matériaux et des meubles.",
+        "Collaborer avec les clients pour comprendre leurs besoins."
+      ],
+      "requirements": [
+        "Diplôme en design d'intérieur.",
+        "Expérience dans la conception d'espaces intérieurs.",
+        "Compétences en logiciels de design."
+      ],
+      "animation": "Hammer"
+    },
+    {
+      "id": 7,
+      "title": "Responsable Marketing",
+      "department": "Marketing",
+      "location": "Rabat, Maroc",
+      "type": "Plein temps",
+      "description": "Nous recherchons un responsable marketing dynamique pour développer et exécuter nos stratégies marketing. Vous serez responsable de la gestion de l'équipe marketing.",
+      "responsibilities": [
+        "Développer des stratégies marketing.",
+        "Gérer les campagnes publicitaires.",
+        "Analyser les performances des campagnes."
+      ],
+      "requirements": [
+        "Diplôme en marketing ou domaine connexe.",
+        "Expérience dans le marketing digital.",
+        "Compétences en analyse de données."
+      ],
+      "animation": "Office"
+    }
+  ]
+}
