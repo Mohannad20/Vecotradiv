@@ -3,9 +3,8 @@ import MarqueeBanner from "../components/MarqueeBanner";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-between">
-      {/* Marquee at the top */}
-      <div className="font-[Monument] font-bold tracking-widest">
+    <div className="min-h-screen flex flex-col ">
+      <div className="font-[Monument] font-bold tracking-widest mb-10">
         <MarqueeBanner
           position="top"
           bg="bg-transparent"
@@ -19,10 +18,10 @@ const Contact = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col md:flex-row items-start gap-10 my-8 px-8 md:px-20 pb-5 w-full">
-        {/* Left Column - Contact Info */}
+      <div 
+        className="flex flex-col md:flex-row min-h-[calc(100vh-200px)] px-6 py-8 md:py-12 mt-40 container mx-auto"
+      >
         <div className="flex-1 flex flex-col justify-start space-y-3 font-[nippo]">
-          {/* Contact Info */}
           <div className="space-y-3">
             <h2 className="uppercase text-[1.5rem] md:text-[2.1rem] font-[Monument] font-medium tracking-widest transition-colors duration-300">
               Contact
@@ -53,7 +52,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Address */}
           <div className="space-y-2 ">
             <h2 className="uppercase text-[1.5rem] md:text-[2.1rem] font-[Monument] font-medium tracking-widest transition-colors duration-300">
               Address
@@ -73,9 +71,8 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Right Column - Contact Form */}
         <div className="flex-1 font-[Monument] ">
-          <h2 className="mb-5  uppercase text-[0.5rem] md:text-[1.1rem] font-[Monument] font-medium tracking-widest transition-colors duration-300">
+          <h2 className="mb-5  uppercase text-[0.5rem] md:text-[1.1rem] font-[Monument] font-medium tracking-widest">
           Vous voulez travailler ensemble ?
           </h2>
           <form className="flex flex-col space-y-6 font-[nippo]">
@@ -95,7 +92,7 @@ const Contact = () => {
             />
             <button
               type="submit"
-              className="border-2 border-dashed border-black py-2 px-6 uppercase font-bold hover:bg-black hover:text-white transition-colors"
+              className="border-2 border-dashed border-black py-2 px-6 uppercase font-bold hover:bg-black hover:text-white transition-colors duration-300 text-[0.7rem] md:text-[1rem]"
             >
               Send
             </button>

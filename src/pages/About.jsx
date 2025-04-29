@@ -62,7 +62,7 @@ const About = () => {
       <div className="flex justify-center mt-16 mb-20">
         <Link
           to="/contact"
-          className="border-2 border-dashed border-black py-3 px-8 uppercase font-bold hover:bg-black hover:text-white transition-colors font-[nippo]"
+          className="border-2 border-dashed border-black py-3 px-8 uppercase font-bold hover:bg-black hover:text-white transition-colors duration-300 font-[nippo]"
         >
           Commencez Votre Projet
         </Link>
