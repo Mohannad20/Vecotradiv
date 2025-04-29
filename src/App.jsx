@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { Home, About, Gallery, Contact, NotFound, Services, Careers } from './pages';
 import CustomCursor from './components/CustomCursor';
+import BackToTop from './components/BackToTop';
+import LanguageSwitcher from './components/LanguageSwitcher';
 
 
 const App = () => {
@@ -12,6 +14,8 @@ const App = () => {
       <BrowserRouter>
       <Navbar/>
       <CustomCursor/>
+      <BackToTop/>
+      <LanguageSwitcher/>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About/>} />
