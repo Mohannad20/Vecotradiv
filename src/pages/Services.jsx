@@ -24,14 +24,11 @@ const Services = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen bg-white px-6 py-12">
-      <h1
-        className="text-[2.5rem] md:text-[4rem] font-[Monument] uppercase text-transparent font-bold tracking-widest mb-12 text-center"
-        style={{ WebkitTextStroke: "2px black" }}
-      >
+    <section className="relative w-full min-h-screen text-neutral-900 bg-white px-6 py-12">
+      <h1 className="text-center my-10 font-[Monument] font-bold text-[3rem] md:text-[5rem] leading-tight tracking-tight">
         Nos Services
       </h1>
-      
+
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-min">
           {services.map((service, index) => (
