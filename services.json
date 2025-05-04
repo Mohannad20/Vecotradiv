@@ -1,25 +1,53 @@
 {
   "services": [  
+    {
+      "title": "Construction gros œuvre",
+      "description": "Fondations, murs, toitures : le squelette de votre bâtiment.",
+      "tool": "Bétonnières, coffrages, plans architecturaux",
+      "useCase": "Construction solide et conforme aux normes en vigueur.",
+      "animation": "Building"
+    },
+    {
+      "title": "Aménagement extérieur",
+      "description": "Jardinage, assainissement, réseaux électriques/phones.",
+      "tool": "Pelleteuses, engins réseaux, outils de jardinage",
+      "useCase": "Créez un extérieur beau, fonctionnel et durable.",
+      "animation": "Gardening"
+    },
+    {
+      "title": "Plomberie & sanitaire",
+      "description": "Installation et réparation de systèmes d’eau et sanitaires.",
+      "tool": "Clés à molette, tuyauterie, équipements sanitaires",
+      "useCase": "Assurer un confort et une hygiène optimaux.",
+      "animation": "Wrench"
+    },
+    {
+      "title": "Revêtement carrelage / sol / granite / marbre",
+      "description": "Des sols durables et esthétiques adaptés à tous les goûts.",
+      "tool": "Niveleurs, colles, carreaux, pierres naturelles",
+      "useCase": "Finitions de qualité pour intérieur et extérieur.",
+      "animation": "Floor"
+    },
       {
         "title": "Vente et achat de biens",
         "description": "Nous facilitons l'achat et la vente de biens immobiliers avec transparence.",
         "tool": "CRM, géolocalisation, estimation immobilière",
         "useCase": "Accompagnement complet des clients dans leurs transactions immobilières.",
-        "animation": "House"
+        "animation": "HouseKeys"
       },
       {
         "title": "Location",
         "description": "Trouvez ou mettez en location un bien en toute simplicité.",
         "tool": "Gestion de calendriers, alertes de disponibilité",
         "useCase": "Services de location pour particuliers et professionnels.",
-        "animation": "Keys"
+        "animation": "HomeLocation"
       },
       {
         "title": "Gestion locative",
         "description": "Gestion complète de vos biens loués : loyers, contrats, maintenance.",
         "tool": "Portail propriétaires, tableaux de suivi",
         "useCase": "Optimisation de la gestion quotidienne des biens loués.",
-        "animation": "Dashboard"
+        "animation": "DocuSign"
       },
       {
         "title": "Évaluation et expertise",
@@ -42,36 +70,9 @@
         "description": "Tous types de travaux de rénovation ou d’amélioration.",
         "tool": "Main d’œuvre spécialisée, gestion de chantier",
         "useCase": "Rénover ou améliorer vos espaces rapidement et efficacement.",
-        "animation": "Tools"
+        "animation": "Handyman"
       },
-      {
-        "title": "Construction gros œuvre",
-        "description": "Fondations, murs, toitures : le squelette de votre bâtiment.",
-        "tool": "Bétonnières, coffrages, plans architecturaux",
-        "useCase": "Construction solide et conforme aux normes en vigueur.",
-        "animation": "Construction"
-      },
-      {
-        "title": "Aménagement extérieur",
-        "description": "Jardinage, assainissement, réseaux électriques/phones.",
-        "tool": "Pelleteuses, engins réseaux, outils de jardinage",
-        "useCase": "Créez un extérieur beau, fonctionnel et durable.",
-        "animation": "Gardening"
-      },
-      {
-        "title": "Plomberie & sanitaire",
-        "description": "Installation et réparation de systèmes d’eau et sanitaires.",
-        "tool": "Clés à molette, tuyauterie, équipements sanitaires",
-        "useCase": "Assurer un confort et une hygiène optimaux.",
-        "animation": "Wrench"
-      },
-      {
-        "title": "Revêtement carrelage / sol / granite / marbre",
-        "description": "Des sols durables et esthétiques adaptés à tous les goûts.",
-        "tool": "Niveleurs, colles, carreaux, pierres naturelles",
-        "useCase": "Finitions de qualité pour intérieur et extérieur.",
-        "animation": "Floor"
-      },
+     
       {
         "title": "Électricité & réseaux",
         "description": "Installation réseau électrique, télécom, internet, caméras.",
@@ -114,7 +115,7 @@
         "description": "Produits et équipements pour la maison.",
         "tool": "Appareils électroménagers, ustensiles, accessoires",
         "useCase": "Faciliter la vie quotidienne avec des produits fiables.",
-        "animation": "Home"
+        "animation": "SmartHome"
       }
   ]
   }
