@@ -6,9 +6,10 @@ const images = [
   '/images/gallery/img1.jpeg',
   '/images/gallery/img2.jpeg',
   '/images/gallery/img3.jpeg',
-  '/images/gallery/img1.jpeg',
-  '/images/gallery/img2.jpeg',
-  '/images/gallery/img3.jpeg',
+  '/images/gallery/img4.jpg',
+  '/images/gallery/img5.jpg',
+  '/images/gallery/img6.jpg',
+  '/images/gallery/img7.jpg',
   
 ];
 
