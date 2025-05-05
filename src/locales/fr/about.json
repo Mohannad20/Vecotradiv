@@ -1,0 +1,29 @@
+{
+    "slogan": "Réaliser des Rêves Sans Frontières",
+    "introduction": "Nous connectons immobilier, construction et solutions domestiques avec des approches innovantes. Des transactions immobilières aux rénovations complètes, nous offrons des services intégrés avec professionnalisme et attention.",
+    "stats": {
+      "managedProperties": "Biens Gérés",
+      "yearsExperience": "Ans d'Expérience Combinée",
+      "completeSolutions": "Solutions Complètes"
+    },
+    "values": {
+      "expertise": {
+        "title": "Expertise",
+        "description": "Connaissance approfondie des marchés immobiliers et des normes de construction."
+      },
+      "transparency": {
+        "title": "Transparence",
+        "description": "Communication claire et évaluations honnêtes dans chaque transaction."
+      },
+      "knowHow": {
+        "title": "Savoir-Faire",
+        "description": "Des évaluations immobilières aux finitions de construction, nous visons l'excellence."
+      },
+      "integratedSolutions": {
+        "title": "Solutions Intégrées",
+        "description": "Service complet de la recherche de bien à l'aménagement clé en main."
+      }
+    },
+    "aboutUs": "Servant des clients à travers Agadir, Inezgane, et Ait Melloul, nous combinons expertise immobilière et savoir-faire en construction pour offrir des solutions immobilières complètes.",
+    "cta": "Commencez Votre Projet"
+  }

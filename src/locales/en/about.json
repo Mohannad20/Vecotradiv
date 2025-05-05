@@ -1,0 +1,29 @@
+{
+    "slogan": "Making Dreams Come True Without Borders",
+    "introduction": "We connect real estate, construction, and domestic solutions with innovative approaches. From real estate transactions to complete renovations, we offer integrated services with professionalism and care.",
+    "stats": {
+      "managedProperties": "Managed Properties",
+      "yearsExperience": "Years of Combined Experience",
+      "completeSolutions": "Complete Solutions"
+    },
+    "values": {
+      "expertise": {
+        "title": "Expertise",
+        "description": "In-depth knowledge of real estate markets and construction standards."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Clear communication and honest evaluations in every transaction."
+      },
+      "knowHow": {
+        "title": "Know-How",
+        "description": "From real estate evaluations to construction finishes, we aim for excellence."
+      },
+      "integratedSolutions": {
+        "title": "Integrated Solutions",
+        "description": "Comprehensive service from property search to turnkey furnishing."
+      }
+    },
+    "aboutUs": "Serving clients across Agadir, Inezgane, and Ait Melloul, we combine real estate expertise and construction know-how to deliver complete real estate solutions.",
+    "cta": "Start Your Project"
+  }
