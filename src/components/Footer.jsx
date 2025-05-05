@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import CornerDots from "./CornerDots";
 import MarqueeBanner from "./MarqueeBanner";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation("common");
   const socialLinks = [
     { icon: <FaFacebookF />, url: "#" },
     { icon: <FaInstagram />, url: "#" },
@@ -12,21 +14,20 @@ const Footer = () => {
   ];
 
   const navigation = [
-    { name: "Services", path: "/services" },
-    { name: "Galerie", path: "/gallery" },
-    { name: "À propos", path: "/about" },
-    { name: "Contact", path: "/contact" },
-    { name: "Carrières", path: "/careers" },
+    { name: t("services"), path: "/services" },
+    { name: t("gallery"), path: "/gallery" }, 
+    { name: t("about"), path: "/about" }, 
+    { name: t("contact"), path: "/contact" },
+    { name: t("careers"), path: "/careers" },
   ];
 
   const terms = [
-    { name: "politique de confidentialité", path: "#" },
-    { name: "Conditions générales", path: "#" },
+    { name: t("privacyPolicy"), path: "#pp" },
+    { name: t("termsAndConditions"), path: "#tc" },
   ];
 
   return (
     <footer className="relative bg-neutral-900 text-white font-[Nippo] font-light py-2 pb-6 overflow-hidden">
-      {/* Top Orbiting Links */}
       <div className="flex justify-between items-center  px-6 text-xs md:text-sm">
         <div className="flex gap-6">
           {socialLinks.map((link, index) => (
@@ -74,9 +75,9 @@ const Footer = () => {
           href="mailto:mohannadmoujiib@gmail.com"
           className="hover:underline hover:text-amber-300"
         >
-          Développé par: Mohannad Moujib
+          {t("developedBy")}: Mohannad Moujib
         </a>
-        <p>Vecotradiv &copy; {new Date().getFullYear()} Agence Immobilière</p>
+        <p>Vecotradiv &copy; {new Date().getFullYear()} {t("realEstateAgency")} </p>
         <div className="flex gap-6 ">
           {terms.map((item, index) => (
             <Link

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import InfiniteSlider from "../components/InfiniteSlider";
 import { Link } from "react-router-dom";
 
@@ -8,6 +9,7 @@ const images = [
 ];
 
 export const Gallery = () => {
+  const { t } = useTranslation('common');
   return (
     <div className="relative w-full h-screen bg-neutral-900 hover:bg-white transition-colors duration-300 overflow-hidden">
    <Link to="/contact">
@@ -71,7 +73,7 @@ export const Gallery = () => {
             WebkitTextStroke: "2px black", 
           }}
       >
-        Galerie
+        {t('gallery')}
       </h1>
       </div>
       </Link>

@@ -1,4 +1,25 @@
 {
-    "welcome": "Welcome",
-    "title": "Our Services"
-  }
+  "welcome": "Welcome",
+  "title": "Our Services",
+  "gallery": "Gallery",
+  "heroTitle": "Let's Build Together",
+  "heroSubtitle": "A raw vision, solid structures, a future built with style.",
+  "heroButton": "Get Started ↓",
+  "contactTitle": "Let's Work Together",
+  "contactDescription": "Real estate, renovations, craftsmanship, or supplies — whatever your ambition, we are here to make it happen with you.",
+  "writeToUs": "Write to us",
+  "or": "or",
+  "callUsNow": "call us now",
+  "contacts": "Contacts",
+  "address": "Address",
+  "getDirections": "Get Directions",
+  "home": "Home",
+  "services": "Services",
+  "about": "About",
+  "contact": "Contact",
+  "careers": "Careers",
+  "privacyPolicy": "Privacy Policy",
+  "termsAndConditions": "Terms and Conditions",
+  "developedBy": "Developed by:",
+  "realEstateAgency": "Real Estate Agency"
+}

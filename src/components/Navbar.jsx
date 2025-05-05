@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CornerDots from "./CornerDots";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useTranslation('common')
 
   const navItems = [
     // { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
-    { name: "Galerie", path: "/gallery" },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
-    { name: "Carrières", path: "/careers" },
+    { name: t("services"), path: "/services" },
+    { name: t("gallery"), path: "/gallery" },
+    { name: t("about"), path: "/about" },
+    { name: t("contact"), path: "/contact" },
+    { name: t("careers"), path: "/careers" },
   ];
 
   return (
@@ -56,7 +58,6 @@ const Navbar = () => {
           } flex items-center gap-8 transition-opacity duration-300`}
         >
           {navItems.map((item, index) => (
-            // </Link>
             <Link
               key={index}
               to={item.path}

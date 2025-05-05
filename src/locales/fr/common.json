@@ -1,4 +1,25 @@
 {
-    "welcome": "Bienvenue",
-    "title": "Nos Services"
-  }
+  "welcome": "Bienvenue",
+  "title": "Nos Services",
+  "gallery": "Galerie",
+  "heroTitle": "Construisons ensemble",
+  "heroSubtitle": "Une vision brute, des structures solides, un avenir construit avec style.",
+  "heroButton": "Commencer ↓",
+  "contactTitle": "Travaillons ensemble",
+  "contactDescription": "Immobilier, rénovations, artisanat ou fournitures — quelle que soit votre ambition, nous sommes là pour la concrétiser avec vous.",
+  "writeToUs": "Écrivez-nous",
+  "or": "ou",
+  "callUsNow": "appelez-nous dès maintenant",
+  "contacts": "Contacts",
+  "address": "Adresse",
+  "getDirections": "Obtenir l'itinéraire",
+  "home": "Accueil",
+  "services": "Services",
+  "about": "À propos",
+  "contact": "Contact",
+  "careers": "Carrières",
+  "privacyPolicy": "Politique de confidentialité",
+  "termsAndConditions": "Conditions générales",
+  "developedBy": "Développé par:",
+  "realEstateAgency": "Agence Immobilière"
+}
