@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const BrutalistCardA = ({
   index,
@@ -14,6 +15,7 @@ const BrutalistCardA = ({
   onExpandToggle,
 }) => {
   const [animationData, setAnimationData] = useState(null);
+  const { t } = useTranslation('services');
 
   useEffect(() => {
     const loadAnimation = async () => {
@@ -91,20 +93,20 @@ const BrutalistCardA = ({
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 text-sm lowercase font-light">
           <div>
-            <h3 className="font-bold uppercase mb-2">Cas d'utilisation</h3>
+            <h3 className="font-bold uppercase mb-2">{t('useCase')}</h3>
             <p>{useCase}</p>
           </div>
           <div>
-            <h3 className="font-bold uppercase mb-2">Outils</h3>
+            <h3 className="font-bold uppercase mb-2">{t('tools')}</h3>
             <p>{tool}</p>
           </div>
           <div className="flex flex-col">
-            <h3 className="font-bold uppercase mb-2">Contact</h3>
+            <h3 className="font-bold uppercase mb-2">{t('contact')}</h3>
             <a href="mailto:vecotradiv.34@gmail.com" className="link-underline w-fit">
-              Envoyer un email
+            {t('sendEmail')}
             </a>
             <Link to="/contact" className="link-underline w-fit">
-              Écrivez-nous
+            {t('writeToUs')}
             </Link>
           </div>
         </div>
@@ -118,7 +120,8 @@ const BrutalistCardA = ({
           onClick={onExpandToggle}
           className="text-xs font-light uppercase p-0.5 tracking-wide underline underline-offset-4 decoration-dotted hover:text-yellow-400 transition cursor-pointer"
         >
-          {isExpanded ? "Fermer" : "Plus d'info"}
+          {/* {isExpanded ? "Fermer" : "Plus d'info"} */}
+          {isExpanded ? t('close') : t('moreInfo')}
         </button>
         <span className="inline-block transition-all duration-300 group-hover:rotate-45 group-hover:translate-y-[-2px]">
           ←

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import BrutalistCardA from "../components/BrutalistCardA";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
   const [services, setServices] = useState([]);
   const [expandedCard, setExpandedCard] = useState(null);
+  const { t } = useTranslation('services');
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -26,7 +28,7 @@ const Services = () => {
   return (
     <section className="relative w-full min-h-screen text-neutral-900 bg-white px-6 py-12">
       <h1 className="text-center my-10 font-[Monument] font-bold text-[3rem] md:text-[5rem] leading-tight tracking-tight">
-        Nos Services
+        {t('title')}
       </h1>
 
       <div className="container mx-auto">
@@ -40,10 +42,14 @@ const Services = () => {
             >
               <BrutalistCardA
                 index={index}
-                title={service.title}
-                description={service.description}
-                useCase={service.useCase}
-                tool={service.tool}
+                // title={service.title}
+                // description={service.description}
+                // useCase={service.useCase}
+                // tool={service.tool}
+                title={t(`services.${index}.title`)} // Translate title
+                description={t(`services.${index}.description`)} // Translate description
+                useCase={t(`services.${index}.useCase`)} // Translate use case
+                tool={t(`services.${index}.tool`)}
                 animation={service.animation}
                 isExpanded={expandedCard === index}
                 onExpandToggle={() => toggleExpand(index)}

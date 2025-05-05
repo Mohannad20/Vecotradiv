@@ -1,0 +1,108 @@
+{
+    "title": "Our Services",
+    "useCase": "Use Case",
+    "tools": "Tools",
+    "contact": "Contact",
+    "sendEmail": "Send an email",
+    "writeToUs": "Write to us",
+    "close": "Close",
+    "moreInfo": "More Info",
+    "services": [
+      {
+        "title": "Structural Construction",
+        "description": "Foundations, walls, roofs: the skeleton of your building.",
+        "tool": "Concrete mixers, formwork, architectural plans",
+        "useCase": "Solid construction that meets current standards."
+      },
+      {
+        "title": "Outdoor Landscaping",
+        "description": "Gardening, sanitation, electrical/phone networks.",
+        "tool": "Excavators, network equipment, gardening tools",
+        "useCase": "Create a beautiful, functional, and durable exterior."
+      },
+      {
+        "title": "Plumbing & Sanitation",
+        "description": "Installation and repair of water and sanitation systems.",
+        "tool": "Wrenches, piping, sanitary equipment",
+        "useCase": "Ensure optimal comfort and hygiene."
+      },
+      {
+        "title": "Flooring & Tiling",
+        "description": "Durable and aesthetic flooring for all tastes.",
+        "tool": "Levelers, adhesives, tiles, natural stones",
+        "useCase": "High-quality finishes for interior and exterior."
+      },
+      {
+        "title": "Real Estate Sales & Purchases",
+        "description": "We facilitate the buying and selling of real estate with transparency.",
+        "tool": "CRM, geolocation, real estate valuation",
+        "useCase": "Comprehensive support for clients in their real estate transactions."
+      },
+      {
+        "title": "Rentals",
+        "description": "Find or rent a property with ease.",
+        "tool": "Calendar management, availability alerts",
+        "useCase": "Rental services for individuals and professionals."
+      },
+      {
+        "title": "Property Management",
+        "description": "Complete management of your rented properties: rents, contracts, maintenance.",
+        "tool": "Owner portals, tracking dashboards",
+        "useCase": "Optimize the daily management of rented properties."
+      },
+      {
+        "title": "Valuation & Expertise",
+        "description": "Reliable evaluation of the value of your real estate.",
+        "tool": "Market analysis tools, legal expertise",
+        "useCase": "Determine the exact value for buying or selling."
+      },
+      {
+        "title": "Personalized Support",
+        "description": "A dedicated agent follows you at every step of the process.",
+        "tool": "1:1 customer support, tracking tools",
+        "useCase": "Tailored and human advice for every real estate project."
+      },
+      {
+        "title": "Various Works",
+        "description": "All types of renovation or improvement works.",
+        "tool": "Specialized labor, project management",
+        "useCase": "Renovate or improve your spaces quickly and efficiently."
+      },
+      {
+        "title": "Electricity & Networks",
+        "description": "Installation of electrical, telecom, internet, and camera networks.",
+        "tool": "Cabling, routers, security equipment",
+        "useCase": "Optimal security, connectivity, and comfort."
+      },
+      {
+        "title": "Air Conditioning & Ventilation",
+        "description": "New air conditioning solutions and maintenance.",
+        "tool": "Heat pumps, split systems, ducts",
+        "useCase": "Efficient thermal regulation all year round."
+      },
+      {
+        "title": "Carpentry",
+        "description": "Wood, aluminum, PVC, and stainless steel design for all uses.",
+        "tool": "Saws, woodworking machines, custom equipment",
+        "useCase": "Custom interior and exterior design."
+      },
+      {
+        "title": "Painting",
+        "description": "Interior, exterior, decorative, or industrial painting.",
+        "tool": "Sprayers, rollers, professional tints",
+        "useCase": "Enhance aesthetics and surface protection."
+      },
+      {
+        "title": "Office Supplies",
+        "description": "Everything you need to equip your workspace.",
+        "tool": "Stationery, furniture, IT equipment",
+        "useCase": "Complete supply for professionals."
+      },
+      {
+        "title": "Household Items",
+        "description": "Products and equipment for the home.",
+        "tool": "Appliances, utensils, accessories",
+        "useCase": "Simplify daily life with reliable products."
+      }
+    ]
+  }

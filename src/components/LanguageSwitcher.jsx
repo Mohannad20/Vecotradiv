@@ -1,11 +1,16 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
+import i18n from '../i18next.jsx';
 
 const LanguageSwitcher = () => {
-  const [currentLang, setCurrentLang] = useState("fr");
+  const { t } = useTranslation();
+  const [currentLang, setCurrentLang] = useState(i18n.language);
 
   const toggleLanguage = () => {
     const newLang = currentLang === "fr" ? "en" : "fr";
-    setCurrentLang(newLang);
+    i18n.changeLanguage(newLang).then(() => {
+      setCurrentLang(newLang);
+    });
   };
 
   return (
