@@ -25,7 +25,7 @@ const BrickCursor = ({ onCompleteShrink }) => {
     if (isClicking && !shrinkDone) {
       let currentScale = 1;
       interval = setInterval(() => {
-        currentScale -= 0.01;
+        currentScale -= 0.03;
         if (currentScale <= 0.6) {
           currentScale = 0.6;
           clearInterval(interval);
@@ -56,14 +56,14 @@ const BrickCursor = ({ onCompleteShrink }) => {
         ref={brickRef}
         className="pointer-events-none fixed z-[9999]"
         style={{
-          width: "250px", // Adjusted size for visibility (can be smaller/larger)
+          width: "250px",
           height: "auto",
           transform: `translate(-50%, -50%) scale(${scale})`,
           transition: "transform 0.05s ease-out",
         }}
       >
         <img
-          src= {brick1} // Replace with your actual path
+          src= {brick1} 
           alt="brick"
           draggable={false}
           className="select-none"
