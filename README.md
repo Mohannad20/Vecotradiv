@@ -65,13 +65,15 @@ vecotradiv/
 ```bash
 git clone https://github.com/Mohannad20/Vecotradiv.git
 cd vecotradiv
+```
 2. **Install dependencies**:
 ```bash
 npm install
+```
 3. **Start the development servers**:
 ```bash
 npm run dev:all
-
+```
 This runs both the Vite dev server and two json-server instances:
 
 JSON server for services at http://localhost:3001
