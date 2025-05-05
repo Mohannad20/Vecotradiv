@@ -1,28 +1,32 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Modal from 'react-modal'; // Make sure to install this!
+import Modal from 'react-modal';
+import ReactCompareImage from 'react-compare-image';
 
 const images = [
   '/images/gallery/img1.jpeg',
   '/images/gallery/img2.jpeg',
   '/images/gallery/img3.jpeg',
+  '/images/gallery/img1.jpeg',
+  '/images/gallery/img2.jpeg',
+  '/images/gallery/img3.jpeg',
+  
 ];
 
 const TILE_SIZE = 400;
 const TILES_X = 20;
 const TILES_Y = 20;
 
-// Initialize react-modal (required once per app)
-Modal.setAppElement('#root'); // Replace with your app's root element ID
+Modal.setAppElement('#root');
 
 const Gallery = () => {
   const containerRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    // Initialize scroll position
     container.scrollLeft = TILE_SIZE * TILES_X;
     container.scrollTop = TILE_SIZE * TILES_Y;
 
@@ -47,6 +51,19 @@ const Gallery = () => {
     return () => container.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleImageClick = (img) => {
+    setSelectedImage(img);
+    setSelectedIndex(images.findIndex(image => image === img));
+  };
+
+  const navigateImages = (direction) => {
+    let newIndex = selectedIndex + direction;
+    if (newIndex < 0) newIndex = images.length - 1;
+    if (newIndex >= images.length) newIndex = 0;
+    setSelectedIndex(newIndex);
+    setSelectedImage(images[newIndex]);
+  };
+
   const tiles = [];
   for (let y = 0; y < TILES_Y * 3; y++) {
     for (let x = 0; x < TILES_X * 3; x++) {
@@ -57,7 +74,7 @@ const Gallery = () => {
       tiles.push(
         <div
           key={`${x}-${y}`}
-          className="absolute overflow-hidden cursor-pointer hover:opacity-90 transition-opacity "
+          className="absolute overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
           style={{
             width: TILE_SIZE,
             height: TILE_SIZE,
@@ -66,7 +83,7 @@ const Gallery = () => {
             marginRight: '-1px',
             marginBottom: '-1px',
           }}
-          onClick={() => setSelectedImage(img)} 
+          onClick={() => handleImageClick(img)}
         >
           <img
             src={img}
@@ -93,40 +110,74 @@ const Gallery = () => {
         {tiles}
       </div>
 
-      {/* 👇 Modal for selected image */}
       <Modal
         isOpen={!!selectedImage}
         onRequestClose={() => setSelectedImage(null)}
         style={{
           overlay: {
-            backgroundColor: 'rgba(0,0,0,0.7)',
-            backdropFilter: 'blur(5px)',
+            backgroundColor: 'rgba(0,0,0,0.9)',
+            backdropFilter: 'blur(8px)',
             zIndex: 50,
           },
           content: {
-            inset: '10%',
-            background: 'transparent',
-            border: 'none',
+            inset: '5%',
+            background: 'black',
+            border: '4px solid white',
             padding: 0,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            overflow: 'hidden',
           },
         }}
       >
         {selectedImage && (
-          <div className="relative w-full h-full">
-            <img 
-              src={selectedImage} 
-              className="w-full h-full object-contain" 
-              alt="Enlarged preview" 
-            />
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 bg-black/50 text-white p-2 rounded-full hover:bg-black/80"
-            >
-              ✕
-            </button>
+          <div className="relative w-full h-full flex flex-col">
+            {/* Navigation Controls */}
+            <div className="absolute top-0 left-0 right-0 flex justify-between p-4 z-10">
+              <button
+                onClick={() => navigateImages(-1)}
+                className="bg-black/70 text-white p-3 rounded-full hover:bg-black border-2 border-white"
+              >
+                ←
+              </button>
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="bg-black/70 text-white p-3 rounded-full hover:bg-red-500 border-2 border-white"
+              >
+                ✕
+              </button>
+              <button
+                onClick={() => navigateImages(1)}
+                className="bg-black/70 text-white p-3 rounded-full hover:bg-black border-2 border-white"
+              >
+                →
+              </button>
+            </div>
+
+            {/* Image Comparison */}
+            <div className="flex-1 w-full h-full">
+              <ReactCompareImage
+                leftImage={images[selectedIndex > 0 ? selectedIndex - 1 : images.length - 1]}
+                rightImage={selectedImage}
+                leftImageLabel="Before"
+                rightImageLabel="After"
+                sliderLineColor="#ffffff"
+                sliderLineWidth={4}
+                sliderPositionPercentage={0.5}
+                handleSize={40}
+                hover={true}
+                aspectRatio="wider"
+                className="w-full h-full"
+              />
+            </div>
+
+            {/* Image Info */}
+            <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 text-center border-t-2 border-white">
+              <p className="font-mono text-lg">
+                Image {selectedIndex + 1} of {images.length}
+              </p>
+            </div>
           </div>
         )}
       </Modal>
