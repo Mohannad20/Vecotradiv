@@ -1,27 +1,37 @@
 import React, { useEffect, useRef, useState } from "react";
-import brick1 from '../../public/images/brick1.png';
+import brick1 from "../../public/images/brick1.png";
 
 const BrickCursor = ({ onCompleteShrink }) => {
   const brickRef = useRef(null);
   const [isClicking, setIsClicking] = useState(false);
   const [scale, setScale] = useState(1);
   const [shrinkDone, setShrinkDone] = useState(false);
+  const [isIdle, setIsIdle] = useState(false);
+  const idleTimeout = useRef(null);
+
+  // Move this outside to make it reusable
+  const handleMouseMove = (e) => {
+    if (brickRef.current) {
+      brickRef.current.style.left = `${e.clientX}px`;
+      brickRef.current.style.top = `${e.clientY}px`;
+    }
+
+    setIsIdle(false);
+    clearTimeout(idleTimeout.current);
+    idleTimeout.current = setTimeout(() => setIsIdle(true), 3000);
+  };
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (brickRef.current) {
-        brickRef.current.style.left = `${e.clientX}px`;
-        brickRef.current.style.top = `${e.clientY}px`;
-      }
-    };
-
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      clearTimeout(idleTimeout.current);
+    };
   }, []);
 
   useEffect(() => {
     let interval;
-  
+
     if (isClicking && !shrinkDone) {
       let currentScale = 1;
       interval = setInterval(() => {
@@ -35,7 +45,6 @@ const BrickCursor = ({ onCompleteShrink }) => {
         setScale(currentScale);
       }, 45);
     } else if (!isClicking && !shrinkDone) {
-      // Grow back smoothly
       let currentScale = scale;
       interval = setInterval(() => {
         currentScale += 0.02;
@@ -46,9 +55,9 @@ const BrickCursor = ({ onCompleteShrink }) => {
         setScale(currentScale);
       }, 30);
     }
-  
+
     return () => clearInterval(interval);
-  }, [isClicking, shrinkDone]);  
+  }, [isClicking, shrinkDone]);
 
   return (
     <>
@@ -63,7 +72,7 @@ const BrickCursor = ({ onCompleteShrink }) => {
         }}
       >
         <img
-          src= {brick1} 
+          src={brick1}
           alt="brick"
           draggable={false}
           className="select-none"
@@ -73,8 +82,25 @@ const BrickCursor = ({ onCompleteShrink }) => {
             height: "auto",
           }}
         />
-
-        
+        {isIdle && (
+          <div
+            style={{
+              position: "absolute",
+              top: "-2rem",
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "#333",
+              color: "#fff",
+              padding: "4px 8px",
+              borderRadius: "4px",
+              fontSize: "0.75rem",
+              whiteSpace: "nowrap",
+              pointerEvents: "none",
+            }}
+          >
+            Hold still to unlock the curtain!
+          </div>
+        )}
       </div>
 
       {/* Hide native cursor */}
@@ -90,8 +116,6 @@ const BrickCursor = ({ onCompleteShrink }) => {
         onMouseDown={() => setIsClicking(true)}
         onMouseUp={() => setIsClicking(false)}
       />
-
-      
     </>
   );
 };
