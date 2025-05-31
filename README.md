@@ -3,6 +3,8 @@ Transforming Visual Concepts into Trade-Ready Experiences
 
 Vecotradiv is an interactive, modern web application that combines 3D experiences, localization, and creative job-service exploration. Designed with immersive animations, dual JSON APIs, and multilingual support, it’s a futuristic playground for visual interaction and digital trade.  
 
+![hero](https://github.com/user-attachments/assets/7cb5588c-e5c3-4fee-b233-9c024ff24f49)
+
 ---
 
 ## 🚀 Key Features  
@@ -15,6 +17,9 @@ Vecotradiv is an interactive, modern web application that combines 3D experience
 - **i18n Support**: Multilingual translation system powered by `i18next` and `react-i18next`.  
 - **Ready for Global Use**: Language JSON files for instant expansion and accessibility.  
 
+![services](https://github.com/user-attachments/assets/397af49b-82b4-48b9-9cd9-8371f40e8099)
+
+
 ### 🔭 Immersive 3D Experience  
 - **React Three Fiber**: Render and animate 3D objects and post-processing effects.  
 - **PMNDRS Assets + Drei Tools**: Seamlessly enhance scenes with lighting, models, and controls.  
@@ -23,6 +28,9 @@ Vecotradiv is an interactive, modern web application that combines 3D experience
 - **Framer Motion + Lottie Animations**: Smooth transitions and delightful motion-based UX.  
 - **Responsive UI**: Fully responsive layout using Tailwind CSS & modern web best practices.  
 - **Dark Mode Ready**: Eye-comfort theme for long browsing sessions.  
+
+![career](https://github.com/user-attachments/assets/d36d9490-4743-41f5-a736-1ca2fd8b6d9d)
+
 
 ---
 
@@ -58,6 +66,9 @@ vecotradiv/
 └── [package.json](http://_vscodecontentref_/3)                # Project metadata and dependencies  
 ```
 ---
+
+![contact](https://github.com/user-attachments/assets/2f9d3a5d-cda2-41f6-b355-fdaefb1e55c6)
+
 
 ## 📦 Local Development Setup
 
@@ -96,13 +107,8 @@ json
 }
 Register the new language in the i18n configuration
 
-📸 UI Snapshots
-Feature	Preview
-Home View 🏠	Home Screenshot
-Services 🛠️	Services Screenshot
-Jobs 💼	Jobs Screenshot
-3D Experience 🪐	3D Screenshot
-(Screenshot placeholders - replace with actual images)
+![footer1](https://github.com/user-attachments/assets/7e4c58c3-b4b5-4f61-8cfd-e9511d42bb01)
+
 
 ## 🤝 Contributions
 We welcome all contributions to make Vecotradiv better! Here's how you can help:
